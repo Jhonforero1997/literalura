@@ -98,7 +98,7 @@ public class Principal {
                                     Optional<Libro> libroExistente = libroService.obtenerLibroPorTitulo(titulo);
                                     if (libroExistente.isPresent()) {
                                         System.out.println("Detalle: Clave (titulo)=(" + titulo + ") ya existe");
-                                        System.out.println("No se puede registrar el mismo libro más de una vez");
+                                        mostrarDetallesLibro(libroDTO);
                                         libroRegistrado = true;
                                         break;
                                     } else {
